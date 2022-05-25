@@ -1,0 +1,13 @@
+{{ user.email }} 様
+
+下記URLよりサイトにアクセスの上、パスワードの再設定を行ってください。
+
+再設定用URL
+{{ protocol}}://{{ domain }}{% url 'account:password_reset_confirm' uid token %}
+
+何かご不明点があれば、こちらにご連絡お願いします。
+
+-------------------
+管理人宛メール
+kota03u2024@gmail.com
+-------------------

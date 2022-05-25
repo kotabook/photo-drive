@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>ようこそ!  ログインユーザー: {{ user.email }}</p>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<p>保存済みのファイル:</p>
+<table class="container-fluid">
+    {% for obj in documents %}
+    <tr class="col-sm-10">
+        <td><p><a href="/photo{{ obj.document.url }}">{{ obj.filename }}</a></p></td>
+        <td><img src="/photo{{ obj.document.url }}" style="object-fit: cover;width: 150px;height: 100px;"></td>
+        <td><p>(Uploaded at: {{ obj.uploaded_at }})</p></td>
+        <td>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="hidden" name="photo_id" value="{{ obj.pk }}">
+                <input type="hidden" name="photo_url" value="{{ obj.document.url }}">
+                <button type="submit" class="btn btn-primary">
+                    削除
+                </button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}
