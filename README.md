@@ -1,4 +1,4 @@
-# world-clock
+# photo-drive
 
 当フォルダの"photo-drive"は、画像ファイルをアップロードして保存ができる、「Google Drive」の画像専用のようなものです。
 * TOP画面
