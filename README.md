@@ -2,6 +2,9 @@
 
 当フォルダの"photo-drive"は、画像ファイルをアップロードして保存ができる、「Google Drive」の画像専用のようなものです。
 
+デモサイトのリンクは以下の通りです。
+http://3.101.135.168/
+
 * HOME画面
 <img src="https://user-images.githubusercontent.com/104336680/170180242-e6892aff-a61b-4545-9f78-d39d5b3b58de.png" width=500>
 * UPLOAD画面
